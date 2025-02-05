@@ -27,12 +27,14 @@ export const menuMessages = defineMessages('components.Layout.Sidebar', {
   browsemovies: 'Movies',
   browsetv: 'Series',
   browsemusic: 'Music',
+  browseporn: 'Porn',
   requests: 'Requests',
   blacklist: 'Blacklist',
   issues: 'Issues',
   users: 'Users',
   settings: 'Settings',
   music: 'Music',
+  porn: 'Porn',
 });
 
 interface SidebarProps {
@@ -75,6 +77,12 @@ const SidebarLinks: SidebarLinkProps[] = [
     messagesKey: 'music',
     svgIcon: <MusicalNoteIcon className="mr-3 h-6 w-6" />,
     activeRegExp: /^\/discover\/music$/,
+  },
+  {
+    href: '/discover/porn',
+    messagesKey: 'porn',
+    svgIcon: <XMarkIcon className="mr-3 h-6 w-6" />,
+    activeRegExp: /^\/discover\/porn$/,
   },
   {
     href: '/requests',
